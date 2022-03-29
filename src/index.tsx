@@ -1,12 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import reportWebVitals from './reportWebVitals';
-import App from "app";
+import {BrowserRouter} from 'react-router-dom'
+import {Authorization} from 'features/authorization'
+
+import {App} from "app";
+
 
 ReactDOM.render(
     <React.StrictMode>
-        <App/>
+        <Authorization>
+            <BrowserRouter>
+                <App/>
+            </BrowserRouter>
+        </Authorization>
     </React.StrictMode>,
     document.getElementById('root')
 );
