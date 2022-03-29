@@ -1,13 +1,11 @@
 import './index.css';
-import {withProviders} from "./providers";
-import {Routing} from "pages";
 
 const App = () => {
     return (
         <div>
-            <Routing/>
+            Meow
         </div>
     )
 }
 
-export default withProviders(App);
+export default App;
