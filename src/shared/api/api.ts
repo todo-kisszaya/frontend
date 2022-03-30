@@ -1,7 +1,7 @@
 import {notification} from 'antd'
 import axios from "axios";
 
-export const baseURL = ''
+export const baseURL = 'http://localhost:5001/api'
 
 export const api = axios.create({baseURL})
 
