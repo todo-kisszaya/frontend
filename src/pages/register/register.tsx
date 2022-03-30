@@ -3,5 +3,3 @@ export const Register = () => {
         Register
     </div>
 }
-
-// export default Register

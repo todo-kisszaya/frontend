@@ -2,7 +2,8 @@ import {useCallback} from "react";
 
 import {useIsLoading} from "features/helpers/lib";
 import {loginUser} from "entities/users/api";
-import {useAuthorization} from "features/authorization";
+import {updateTokens, useAuthorization} from "features/authorization";
+import {notification} from "antd";
 
 export const useLogin = () => {
     const {startLoading, finishLoading, isLoading} = useIsLoading()
@@ -12,15 +13,18 @@ export const useLogin = () => {
         try {
             startLoading()
             const {data} = await loginUser(params)
-            console.log('data', data)
+            //updateTokens({access: data.token})
             //setIsAuthorized(true)
         } catch (error) {
             finishLoading()
-            console.log('error', error)
+            notification.error({
+                message: "Ошибка входа",
+                description: "Неверный логин или пароль"
+            })
 
         }
     }, [finishLoading, finishLoading, setIsAuthorized])
 
 
-    return { handleLogin, isLoading }
+    return {handleLogin, isLoading}
 }
