@@ -1,9 +1,9 @@
 import {useCallback} from "react";
+import {notification} from "antd";
 
 import {useIsLoading} from "features/helpers/lib";
 import {loginUser} from "entities/users/api";
 import {updateTokens, useAuthorization} from "features/authorization";
-import {notification} from "antd";
 
 export const useLogin = () => {
     const {startLoading, finishLoading, isLoading} = useIsLoading()
