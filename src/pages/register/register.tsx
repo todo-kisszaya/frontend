@@ -36,7 +36,7 @@ export const Register = () => {
                 </Button>
             </Form.Item>
             <Form.Item>
-                <Link to={PUBLIC_PATH.REGISTER}>
+                <Link to={PUBLIC_PATH.LOGIN}>
                     <Button block>
                         Уже есть аккаунт
                     </Button>

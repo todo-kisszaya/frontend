@@ -13,8 +13,8 @@ export const useLogin = () => {
         try {
             startLoading()
             const {data} = await loginUser(params)
-            //updateTokens({access: data.token})
-            //setIsAuthorized(true)
+            updateTokens({access: data.token})
+            setIsAuthorized(true)
         } catch (error) {
             finishLoading()
             notification.error({

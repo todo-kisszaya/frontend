@@ -1,7 +1,8 @@
 type Id = string | number
 
 export const routes = {
-    token: '/auth/token',
+    token: '/token',
+
     login: '/auth/login',
     register: '/auth/register',
 

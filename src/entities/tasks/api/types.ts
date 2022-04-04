@@ -1,15 +1,4 @@
 // Requests
-export interface GetAllTasksRequest {
-
-}
-
-export interface GetTaskRequest {
-
-}
-
-export interface DeleteTaskRequest {
-
-}
 
 export interface UpdateTaskRequest {
     name: string,
