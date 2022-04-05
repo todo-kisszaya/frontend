@@ -4,7 +4,6 @@ import {Grid} from "shared/ui"
 import {TasksList} from "entities/tasks/ui";
 import {AddTask} from "widgets/tasks/ui";
 
-
 export const Tasks = () => {
     const {tasks} = useTasks()
 

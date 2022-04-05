@@ -8,7 +8,7 @@ import {routes} from "shared/api";
 export const useAddTask = () => {
 
     const handleAddTask = useCallback(async (values: CreateTaskRequest) => {
-        const {data} = await createTask(values)
+        await createTask(values)
         await mutate(routes.tasks)
     }, [])
 
