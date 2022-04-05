@@ -1,7 +1,9 @@
 import {Grid, Typography} from "antd"
 import {useTasks} from "entities/tasks/api"
 
-export const TasksList = () => {
+
+
+export const Tasks = () => {
     const {tasks} = useTasks()
 
     // return (<Grid>
@@ -13,4 +15,4 @@ export const TasksList = () => {
     </div>
 }
 
-// export default TasksList
+// export default Tasks

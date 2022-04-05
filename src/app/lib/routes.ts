@@ -8,7 +8,7 @@ export const publicRoutes: Routes = [
 ]
 
 export const privateRoutes: Routes = [
-    {path: PRIVATE_PATH.TASKS, element: pages.TasksList, default: true},
+    {path: PRIVATE_PATH.TASKS, element: pages.Tasks, default: true},
     {path: PRIVATE_PATH.TASK, element: pages.TaskDetails}
 ]
 
