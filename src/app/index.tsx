@@ -4,6 +4,7 @@ import {useAuthorization} from "features/authorization";
 import {privateRoutes, publicRoutes} from "./lib/routes";
 import {Routing} from "features/routing";
 import {PrivateLayout} from "widgets/private-layout";
+import {PublicLayout} from "../widgets/public-layout";
 
 export const App = () => {
     const {isAuthorized} = useAuthorization()
@@ -13,6 +14,8 @@ export const App = () => {
             <Routing routes={privateRoutes}/>
         </PrivateLayout>
     ) : (
-        <Routing routes={publicRoutes}/>
+        <PublicLayout>
+            <Routing routes={publicRoutes}/>
+        </PublicLayout>
     )
 }

@@ -4,10 +4,12 @@ import {notification} from "antd";
 import {useIsLoading} from "features/helpers/lib";
 import {loginUser} from "entities/users/api";
 import {updateTokens, useAuthorization} from "features/authorization";
+import {useNavigate} from "react-router-dom";
 
 export const useLogin = () => {
     const {startLoading, finishLoading, isLoading} = useIsLoading()
     const {setIsAuthorized} = useAuthorization()
+    const navigate = useNavigate()
 
     const handleLogin = useCallback(async (params: Parameters<typeof loginUser>['0']) => {
         try {
@@ -15,6 +17,7 @@ export const useLogin = () => {
             const {data} = await loginUser(params)
             updateTokens({access: data.token})
             setIsAuthorized(true)
+            navigate('/tasks')
         } catch (error) {
             finishLoading()
             notification.error({

@@ -1,0 +1,14 @@
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  background: white;
+  width: 560px;
+  padding: 40px;
+  flex: 0 0 0;
+}
