@@ -5,6 +5,7 @@ import {useIsLoading} from "features/helpers/lib";
 import {loginUser} from "entities/users/api";
 import {updateTokens, useAuthorization} from "features/authorization";
 import {useNavigate} from "react-router-dom";
+import {PRIVATE_PATH} from "shared/config";
 
 export const useLogin = () => {
     const {startLoading, finishLoading, isLoading} = useIsLoading()
@@ -17,7 +18,7 @@ export const useLogin = () => {
             const {data} = await loginUser(params)
             updateTokens({access: data.token})
             setIsAuthorized(true)
-            navigate('/tasks')
+            navigate(PRIVATE_PATH.TASKS)
         } catch (error) {
             finishLoading()
             notification.error({
