@@ -8,11 +8,10 @@ export interface FiltersInterface {
 }
 
 interface Props {
-    filters: FiltersInterface,
     setFilters: Dispatch<FiltersInterface>
 }
 
-export const Filters = ({filters, setFilters}: Props) => {
+export const Filters = ({setFilters}: Props) => {
 
     const toggleFilters = useCallback((key: string) => {
         if (key === 'all') setFilters({})

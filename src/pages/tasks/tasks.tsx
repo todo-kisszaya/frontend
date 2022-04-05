@@ -14,7 +14,7 @@ export const Tasks = () => {
     return <Grid>
         <Typography.Title level={2}>Мои задачи</Typography.Title>
         <AddTask/>
-        <Filters filters={filters} setFilters={setFilters}/>
+        <Filters setFilters={setFilters}/>
         <TasksList tasks={tasks}/>
     </Grid>
 }
