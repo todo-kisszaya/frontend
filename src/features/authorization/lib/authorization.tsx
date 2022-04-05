@@ -16,6 +16,10 @@ export const Authorization = ({children}: Props) => {
             .finally(() => setIsLoading(false))
     }, [])
 
+    // useEffect(() => {
+    //
+    // }, [isAuthorized])
+
     const contextValue = useMemo(() => ({isAuthorized, setIsAuthorized}), [isAuthorized])
 
     if (isLoading) {
